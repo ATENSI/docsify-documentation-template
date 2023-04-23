@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <meta name="description" content="Description">
+  <title>Docsify Documentation Template</title>
+
+  <!-- Docsify theme -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-darklight-theme@3.2.0/dist/style.min.css" title="docsify-darklight-theme" type="text/css">
+
+  <!-- PrismJS theme -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.min.css" type="text/css">
+
+  <!-- Sidebar theme -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse@1.3.5/dist/sidebar.min.css" type="text/css">
+
+  <!-- Extras for theme -->
+  <link rel="stylesheet" href="css/extra.css" type="text/css">
+</head>
+<body>
+  <div id="app"></div>
+  <script>
+    window.$docsify = {
+      /* Docsify */
+      name: '<span><img src="images/icon.svg" class="sidebar-logo"></span></br><span>Docsify documentation template</span>',
+      repo: 'https://github.com/ATENSI/docsify-documentation-template.git',
+      //logo: 'images/icon.svg',
+      maxLevel: 2,
+      loadSidebar: true,
+      alias: {
+        '/.*/_sidebar.md': '/_sidebar.md'
+      },
+      sidebarDisplayLevel: 0, // set sidebar display level to 0 to collapse all
+
+      'flexibleAlerts': {
+        style: 'callout', // or flat
+      },
+
+      /* Theme */
+      darklightTheme: {
+          siteFont : "PT Sans",
+          defaultTheme : 'dark',
+          codeFontFamily : 'Roboto Mono, Monaco, courier, monospace',
+          bodyFontSize : '18px',
+          dark: {
+              accent: '#0078e0',
+              toogleBackground : '#ffffff',
+              background: '#091a28',
+              textColor: '#b4b4b4',
+              codeTextColor : '#ffffff',
+              codeBackgroundColor : '#0e2233',
+              borderColor : '#0078e0',
+              blockQuoteColor : '#858585',
+              highlightColor : '#d22778',
+              sidebarSublink : '#b4b4b4',
+              codeTypeColor : '#ffffff',
+              coverBackground : 'linear-gradient(to left bottom, hsl(118, 100%, 85%) 0%,hsl(181, 100%, 85%) 100%)',
+              toogleImage : 'url(https://cdn.jsdelivr.net/npm/docsify-darklight-theme@3.2.0/icons/sun.svg)'
+          },
+          light: {
+              accent: '#005daf',
+              toogleBackground : '#091a28',
+              background: '#ffffff',
+              textColor: '#34495e',
+              codeTextColor : '#525252',
+              codeBackgroundColor : '#f8f8f8',
+              borderColor : '#005daf',
+              blockQuoteColor : '#858585',
+              highlightColor : '#d22778',
+              codeTypeColor : '#091a28',
+              coverBackground : 'linear-gradient(to left bottom, hsl(118, 100%, 85%) 0%,hsl(181, 100%, 85%) 100%)',
+              toogleImage : 'url(https://cdn.jsdelivr.net/npm/docsify-darklight-theme@3.2.0/icons/moon.svg)'
+          }
+      },
+            
+      /* Search */
+      search: 'auto', // default
+
+      search: [
+        '/',
+        '/pages',
+      ],
+      
+      /* Footer */
+      plugins: [
+        function pageFooter(hook, vm) {
+          var footer = [
+            '<hr/>',
+            '<footer>',
+            '<span>Copyright &copy; 2023 ATENSI - Classification: public | internal-only | confidential | restricted</span><br>',
+            '<span>Proudly published with <a href="https://github.com/docsifyjs/docsify" target="_blank">docsify</a>.</span>',
+            '</footer>',
+          ].join('');
+
+          hook.afterEach(function (html) {
+            return html + footer;
+          });
+        },
+      ],
+    }
+  </script>
+
+  <!-- Docsify v4 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-darklight-theme@3.2.0/dist/index.min.js"></script>
+  
+  <!-- Docsify plugins -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code@2.1.1/dist/docsify-copy-code.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-pagination@2.10.1/dist/docsify-pagination.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse@1.3.5/dist/docsify-sidebar-collapse.min.js"></script>
+
+  <!-- Language syntax highlighting -->
+  <script src="//cdn.jsdelivr.net/npm/prism-themes@1.9.0/index.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-bash.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-git.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-go.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-hcl.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-ini.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-json.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-markup.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-python.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-sql.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-yaml.min.js"></script>
+
+  <!-- Flexible  alerts -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-plugin-flexible-alerts@1.1.1/dist/docsify-plugin-flexible-alerts.min.js"></script>
+
+  </body>  
+</html>
